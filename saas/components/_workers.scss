@@ -1,0 +1,85 @@
+.section-workers {
+  @extend %padding-section;
+  background-color: $secondary-white-color;
+}
+.workers-title {
+  @include title-h2;
+}
+.workers-list {
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.workers-list .item {
+  max-width: 270px;
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    @media screen and (min-width: 768px) {
+      margin-right: 30px;
+    }
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.name-workers {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: $primary-text-color;
+  font-weight: 500;
+  font-size: $font-size-btn;
+  line-height: 1.19;
+  text-align: center;
+}
+.workers p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: $font-size-btn;
+  line-height: 1.19;
+  font-weight: $font-weight-body;
+  text-align: center;
+}
+.description-worker {
+  padding-top: 30px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  background-color: $primary-white-color;
+}
+.description-worker .soc-list {
+  @include flex-row(center);
+}
+.soc-icon {
+  width: 44px;
+  height: 44px;
+  // @include flex-row(center);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  color: $icon-color;
+  transition: color 250ms transition-timing-function,
+    background-color 250ms transition-timing-function;
+  &:hover,
+  &:focus {
+    color: $white-button-color;
+    background-color: $accent-button-color;
+  }
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

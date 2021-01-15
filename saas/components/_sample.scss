@@ -1,0 +1,34 @@
+.section-sample {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  padding-bottom: 94px;
+}
+.sample-title {
+  @include title-h2;
+}
+.sample-list {
+  @extend %flex-row;
+}
+
+.sample-list .item {
+  @include flex-row(center);
+  align-items: flex-end;
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.signature {
+  position: absolute;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin: 0;
+  width: 100%;
+  font-weight: $font-weight-bold;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba(47, 48, 58, 0.8);
+  color: $primary-white-color;
+}

@@ -1,0 +1,21 @@
+.logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  font-family: $font-family-logo;
+  font-weight: $font-weight-bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: $letter-spacing-body;
+  color: $accent-button-color;
+}
+.logo-text {
+  color: $primary-text-color;
+}
+.footer-logo {
+  padding: 0;
+  margin-bottom: 20px;
+}
+.text-logo-footer {
+  color: $white-button-color;
+}

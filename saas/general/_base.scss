@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.list {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+  display: inline-block;
+}
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.full-document {
+  color: $title-text-color;
+  font-family: $font-family-body;
+  font-style: normal;
+  font-size: $font-size-body;
+  line-height: 1.71;
+  letter-spacing: $letter-spacing-body;
+  background-color: $primary-white-color;
+  text-decoration: none;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+   @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+   @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
