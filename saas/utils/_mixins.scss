@@ -34,3 +34,11 @@
   @include flex-row(center);
   color: $primary-text-color;
 }
+@mixin mob-title-h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: $mob-font-size-title-h2;
+  line-height: 1.18;
+  @include flex-row(center);
+  color: $primary-text-color;
+}

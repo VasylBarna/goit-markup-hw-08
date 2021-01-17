@@ -6,7 +6,7 @@
   }
 }
 .clients-title {
-  @include title-h2;
+  @include mob-title-h2;
   min-height: 42px;
 }
 .clients-list {
