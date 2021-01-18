@@ -68,7 +68,7 @@
   width: 30px;
   height: 30px;
   padding: 0;
-  // @include flex-row(center);
+  @include flex-row(center);
   cursor: pointer;
   color: #000;
   background-color: $white-button-color;
@@ -88,8 +88,8 @@
   transition: color 250ms $transition-timing-function;
 }
 .form {
-  // display: flex;
-  // flex-direction: column;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
@@ -111,7 +111,7 @@
   margin-bottom: 10px;
 }
 .form-field {
-  // display: flex;
+  display: flex;
   position: relative;
   flex-direction: column;
 }
@@ -140,7 +140,7 @@
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
-  // display: flex;
+  display: flex;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -170,7 +170,7 @@ textarea {
 }
 .checkbox-lable {
   margin-bottom: 30px;
-  // @include flex-row(center);
+  @include flex-row(center);
   cursor: pointer;
 }
 /* .visually-hidden */
@@ -196,7 +196,7 @@ textarea {
   }
 }
 .check-icon {
-  // @extend %flex-row;
+  @extend %flex-row;
   &::before {
     margin-right: 10px;
     display: inline-block;
