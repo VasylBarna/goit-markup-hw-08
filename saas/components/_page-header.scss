@@ -126,11 +126,12 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  outline: transparent;
 }
-.menu-button .icon-cross {
-  width: 18.7px;
-  height: 18.7px;
-}
+// .menu-button .icon-cross {
+//   width: 18.7px;
+//   height: 18.7px;
+// }
 .menu-button .icon-cross {
   display: none;
 }
