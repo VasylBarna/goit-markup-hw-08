@@ -163,6 +163,7 @@
   }
   @media screen and (min-width: 1200px) {
     font-size: 12px;
+    line-height: 1.17;
   }
 }
 textarea {
@@ -181,7 +182,8 @@ textarea {
     width: 100%;
     background-color: currentColor;
     @media screen and (min-width: 1200px) {
-      bottom: 4px;}
+      bottom: 4px;
+    }
   }
 }
 .checkbox-lable {
