@@ -1,0 +1,59 @@
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: transparent;
+  overflow-y: scroll;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  min-height: 453px;
+  padding-top: 60px;
+  padding-right: auto;
+  padding-bottom: 60px;
+  padding-left: auto;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #ececec;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+.menu-container.is-open {
+  display: block;
+}
+
+.svg-menu {
+  max-width: 24px;
+  max-height: 18.7px;
+}
+
+.icon-menu {
+  max-width: 24px;
+  max-height: 16px;
+}
+
+.icon-cross {
+  max-width: 18.7px;
+  max-height: 18.7px;
+}
+/*# sourceMappingURL=menu.css.map */

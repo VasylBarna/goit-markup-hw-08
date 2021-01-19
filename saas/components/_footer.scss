@@ -5,8 +5,10 @@
   text-align: center;
   background-color: $black-bgc;
   @media screen and (min-width: 1200px) {
-    display: flex;
+     display: flex;
     text-align: inherit;
+    align-items: baseline;
+    justify-content: space-between;
   }
 }
 .footers-tablet {
@@ -16,6 +18,8 @@
   }
   @media screen and (min-width: 1200px) {
     display: flex;
+    align-items: baseline;
+
   }
 }
 
@@ -85,8 +89,6 @@
     margin-right: 0;
     margin-bottom: 0px;
     margin-left: 93px;
-    display: flex;
-    flex-direction: column;
   }
 }
 .subscribe-title {
@@ -95,6 +97,7 @@
   margin-bottom: 20px;
   margin-left: 0;
   display: block;
+  width: 219px;
   font-weight: $font-weight-bold;
   @include title-h3;
 }
@@ -102,6 +105,9 @@
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: block;
     text-align: -webkit-center;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 570px;
   }
 }
 .footer-input {
