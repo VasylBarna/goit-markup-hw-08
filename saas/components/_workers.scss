@@ -1,6 +1,11 @@
 .section-workers {
-  @extend %padding-section;
   background-color: $secondary-white-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .workers-title {
   @include mob-title-h2;
@@ -9,7 +14,6 @@
   }
 }
 .workers-list {
-  text-align: center;
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
@@ -43,11 +47,11 @@
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-      width: 354px;
-    }
-      @media screen and (min-width: 1200px) {
-      width: 270px;
-    }
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }
 .name-workers {
   margin-top: 0px;
@@ -86,7 +90,7 @@
   text-decoration: none;
   color: $icon-color;
   transition: color 250ms transition-timing-function,
-  background-color 250ms transition-timing-function;
+    background-color 250ms transition-timing-function;
   &:hover,
   &:focus {
     color: $white-button-color;
