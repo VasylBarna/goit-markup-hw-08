@@ -4,30 +4,24 @@
   height: 40px;
   margin: 0;
   padding: 0;
-  display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   background-color: transparent;
   // outline: transparent;
-  overflow-y: scroll;
   color: #000;
-  transition: color 250ms transition-timing-function;
-  &:hover {
-    color: $accent-button-color;
-  }
+
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
-
 .menu-button .icon-cross {
   display: none;
 }
-.menu-button.is-open .icon-menu {
+.menu-button.is-open .icon-cross {
   display: block;
 }
-.menu-button.is-open .icon-cross {
+.menu-button.is-open .icon-menu {
   display: none;
 }
 
@@ -60,6 +54,9 @@
 }
 .svg-menu {
   fill: currentColor;
-  align-self: center;
   color: #000;
+  transition: color 250ms transition-timing-function;
+  &:hover {
+    color: $accent-button-color;
+  }
 }

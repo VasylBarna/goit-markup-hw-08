@@ -28,7 +28,9 @@
   margin: 0 auto;
 }
 .feature-list .item {
-  width: 450px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
 
   @media screen and (min-width: 768px) {
     width: 354px;
@@ -41,14 +43,21 @@
       margin-bottom: 30px;
     }
   }
+  &:nth-child(-n + 2) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+  }
 }
 .icon-style {
-  min-width: 270px;
-  height: 120px;
   margin-bottom: 30px;
   background: $secondary-white-color;
   border-radius: 4px;
   @include flex-row(center);
+  @media screen and (min-width: 480px) {
+    min-width: 270px;
+  }
+  height: 120px;
 }
 .icon-feature {
   width: 70px;

@@ -12,6 +12,7 @@
 }
 
 .sample-list .item {
+  width: 370px;
   @include flex-row(center);
   align-items: flex-end;
   position: relative;

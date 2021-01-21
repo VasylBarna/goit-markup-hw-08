@@ -5,9 +5,9 @@
 }
 .overlay-text {
   position: absolute;
-  padding-top: 63px;
+  padding-top: 77px;
   padding-right: 24px;
-  padding-bottom: 63px;
+  padding-bottom: 77px;
   padding-left: 24px;
   margin: 0;
   width: 100%;
@@ -23,4 +23,12 @@
   color: $primary-white-color;
   background-color: rgba(33, 150, 243, 0.9);
   transition: transform 250ms $transition-timing-function;
+  @media screen and (min-width: 768px) {
+    padding-top: 49px;
+    padding-bottom: 49px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 63px;
+    padding-bottom: 63px;
+  }
 }
