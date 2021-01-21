@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.check-icon, .sample-list {
+.check-icon, .sample-list, .footer-input::placeholder {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -370,7 +370,6 @@ img {
 .footer-logo {
   padding: 0;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .text-logo-footer {
@@ -1378,6 +1377,10 @@ textarea {
   display: block;
   text-align: center;
   background-color: #2f303a;
+  display: flex;
+  text-align: inherit;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1390,6 +1393,7 @@ textarea {
 }
 
 .footers-tablet {
+  text-align: center;
   align-items: baseline;
 }
 
@@ -1397,6 +1401,15 @@ textarea {
   .footers-tablet {
     display: flex;
     align-items: baseline;
+    text-align: inherit;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer_desktop {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
   }
 }
 
@@ -1477,12 +1490,17 @@ textarea {
   margin-right: 10px;
 }
 
+.subscribe {
+  text-align: center;
+}
+
 @media screen and (min-width: 1200px) {
   .subscribe {
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0px;
     margin-left: 93px;
+    text-align: inherit;
   }
 }
 
@@ -1508,6 +1526,7 @@ textarea {
 
 @media screen and (min-width: 1200px) {
   .form-footer {
+    display: inline-flex;
     max-width: 570px;
   }
 }
@@ -1546,15 +1565,11 @@ textarea {
 @media screen and (min-width: 1200px) {
   .footer-input {
     margin-right: 12px;
-    width: 358px;
+    margin-bottom: 0;
   }
 }
 
 .subscribe .btn {
-  padding-top: 10px;
-  padding-right: 28px;
-  padding-bottom: 10px;
-  padding-left: 28px;
   padding-top: 10px;
   padding-bottom: 10px;
   max-width: 200px;
@@ -1572,6 +1587,8 @@ textarea {
   cursor: pointer;
   color: #ffffff;
   background-color: #2196f3;
+  padding-right: 13px;
+  padding-left: 28px;
   display: inline-flex;
 }
 

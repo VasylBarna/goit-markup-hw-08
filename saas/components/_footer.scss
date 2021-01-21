@@ -4,6 +4,10 @@
   display: block;
   text-align: center;
   background-color: $black-bgc;
+  display: flex;
+  text-align: inherit;
+  align-items: baseline;
+  justify-content: space-between;
   @media screen and (min-width: 1200px) {
     display: flex;
     text-align: inherit;
@@ -12,13 +16,23 @@
   }
 }
 .footers-tablet {
+  text-align: center;
   align-items: baseline;
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: baseline;
+    text-align: inherit;
+  }
+  @media screen and (min-width: 1200px) {
   }
 }
-
+.footer_desktop {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
 .contacts-list .item {
   display: block;
   font-weight: $font-weight-body;
@@ -72,11 +86,13 @@
   margin-right: 10px;
 }
 .subscribe {
+  text-align: center;
   @media screen and (min-width: 1200px) {
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0px;
     margin-left: 93px;
+    text-align: inherit;
   }
 }
 .subscribe-title {
@@ -94,6 +110,7 @@
     text-align: -webkit-center;
   }
   @media screen and (min-width: 1200px) {
+    display: inline-flex;
     max-width: 570px;
   }
 }
@@ -117,7 +134,7 @@
     font-weight: $font-weight-body;
     font-size: $font-size-btn;
     line-height: 1.25;
-    // @extend %flex-row;
+    @extend %flex-row;
     color: rgba(255, 255, 255, 0.6);
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -125,15 +142,13 @@
   }
   @media screen and (min-width: 1200px) {
     margin-right: 12px;
-    width: 358px;
+    margin-bottom: 0;
   }
 }
 .subscribe .btn {
-  padding-top: 10px;
-  padding-right: 28px;
-  padding-bottom: 10px;
-  padding-left: 28px;
   @include btn;
+  padding-right: 13px;
+  padding-left: 28px;
   display: inline-flex;
 }
 .subscribe .send {

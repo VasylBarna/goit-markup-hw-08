@@ -129,12 +129,12 @@
                       type="image/webp"
                     />
                     <source
-                      media="(min-width: 768px) 50vw"
+                      media="(min-width: 768px) 50vw, 100vw"
                       srcset="
-                    ./images/tablet/webp/Technokryak.webp     450,
-                    ./images/tablet/webp/Technokryak@2x.webp  900,
-                    ./images/tablet/webp/Technokryak@3x.webp 1350w
-                  "
+                        ./images/tablet/webp/Technokryak.webp     450w,
+                        ./images/tablet/webp/Technokryak@2x.webp  900w,
+                        ./images/tablet/webp/Technokryak@3x.webp 1350w
+                      "
                       type="image/webp"
                     />
                     <source
@@ -172,10 +172,45 @@
             <li class="item">
               <a class="project-link" href="#">
                 <div class="overlay-project">
-                  <img
-                    src="./images/portfolio2.jpg"
-                    alt="Фото Постер New Orlean vs Golden Star"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px) 33vw, 100vw"
+                      srcset="
+                        ./images/desktop/webp/GoldenStar.webp     450w,
+                        ./images/desktop/webp/GoldenStar@2x.webp  900w,
+                        ./images/desktop/webp/GoldenStar@3x.webp 1350w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/tablet/webp/GoldenStar.webp     450w,
+                        ./images/tablet/webp/GoldenStar@2x.webp  900w,
+                        ./images/tablet/webp/GoldenStar@3x.webp 1350w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px) 100vw"
+                      srcset="
+                        ./images/mobile/webp/GoldenStar.webp     450w,
+                        ./images/mobile/webp/GoldenStar@2x.webp  900w,
+                        ./images/mobile/webp/GoldenStar@3x.webp 1350w
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/desktop/GoldenStar.jpg, ./images/tablet/GoldenStar.jpg, ./images/mobile/GoldenStar.jpg"
+                      alt="Фото Golden Star"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, (max-width: 767px) 100vw, 100vw"
+                      srcset="
+                        ./images/desktop/GoldenStar.jpg 370w,
+                        ./images/tablet/GoldenStar.jpg  354w,
+                        ./images/mobile/GoldenStar.jpg  450w
+                      "
+                    />
+                  </picture>
                   <p class="overlay-text">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
