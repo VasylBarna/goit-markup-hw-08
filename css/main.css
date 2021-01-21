@@ -1105,6 +1105,7 @@ textarea {
   padding-bottom: 27px;
   margin: 0;
   width: 100%;
+  height: auto;
   font-weight: 700;
   line-height: 1.14;
   text-align: center;
@@ -1678,7 +1679,7 @@ textarea {
   /* width: calc((100% - 60px) / 3); */
   margin-bottom: 30px;
   width: 450px;
-  min-height: 404px;
+  max-height: 404px;
   background-color: #ffffff;
 }
 
@@ -1761,9 +1762,9 @@ textarea {
 .overlay-text {
   position: absolute;
   padding-top: 77px;
-  padding-right: 24px;
+  padding-right: 18px;
   padding-bottom: 77px;
-  padding-left: 24px;
+  padding-left: 18px;
   margin: 0;
   width: 100%;
   height: 100%;
