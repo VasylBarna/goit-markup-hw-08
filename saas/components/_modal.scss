@@ -62,7 +62,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms $transition-timing-function;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     min-width: 528px;
     min-height: 581px;
   }
@@ -113,7 +113,7 @@
   font-weight: $font-weight-bold;
   text-transform: uppercase;
   color: $primary-text-color;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     min-width: 448px;
     line-height: 1.5;
   }
@@ -161,7 +161,7 @@
     font-size: $font-size-body;
     line-height: 1.14;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     font-size: 12px;
     line-height: 1.17;
   }
@@ -181,7 +181,7 @@ textarea {
     height: 1px;
     width: 100%;
     background-color: currentColor;
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desctop) {
       bottom: 4px;
     }
   }
@@ -192,7 +192,7 @@ textarea {
   cursor: pointer;
   font-size: 12px;
   line-height: 1.17;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     font-size: $font-size-body;
     line-height: 1.71;
   }

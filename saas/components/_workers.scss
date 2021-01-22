@@ -2,22 +2,22 @@
   background-color: $secondary-white-color;
   padding-top: 60px;
   padding-bottom: 60px;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
 }
 .workers-title {
   @include mob-title-h2;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     @include title-h2;
   }
 }
 .workers-list {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 .workers-list .item {
@@ -25,33 +25,33 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-   @media screen and (min-width: 480px) {
+   @media screen and (min-width: $mobile) {
       width: 450px;
     }
   &:not(:last-child) {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $max-mobile) {
       margin-bottom: 30px;
     }
   }
   &:nth-child(2n + 1) {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
       margin-right: 30px;
     }
   }
   &:nth-child(-n + 2) {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
       margin-bottom: 30px;
     }
   }
   &:not(:last-child) {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desctop) {
       margin-right: 30px;
     }
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     width: 354px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     width: 270px;
   }
 }

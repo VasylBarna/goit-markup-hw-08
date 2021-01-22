@@ -4,14 +4,11 @@
   height: 40px;
   margin: 0;
   padding: 0;
-  justify-content: center;
-  align-items: center;
   border: none;
   background-color: transparent;
-  // outline: transparent;
+  outline: transparent;
   color: #000;
-
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 }
@@ -26,7 +23,7 @@
 }
 
 .menu-container {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $max-mobile) {
     display: none;
     position: absolute;
     top: 100%;
@@ -48,14 +45,14 @@
       display: block;
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
   }
 }
 .svg-menu {
   fill: currentColor;
   color: #000;
-  transition: color 250ms transition-timing-function;
+
   &:hover {
     color: $accent-button-color;
   }

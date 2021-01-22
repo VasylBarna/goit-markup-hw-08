@@ -8,7 +8,7 @@
   text-align: inherit;
   align-items: baseline;
   justify-content: space-between;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     display: flex;
     text-align: inherit;
     align-items: baseline;
@@ -18,16 +18,16 @@
 .footers-tablet {
   text-align: center;
   align-items: baseline;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     align-items: baseline;
     text-align: inherit;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
   }
 }
 .footer_desktop {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -41,7 +41,7 @@
     margin-bottom: 8px;
   }
   &:not(:last-child) {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desctop) {
       margin-bottom: 9px;
     }
   }
@@ -54,22 +54,22 @@
 }
 .adress {
   flex-direction: column;
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: $max-tablet) {
     margin-bottom: 60px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     padding-left: 76px;
   }
 }
 .sign {
   margin-bottom: 60px;
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 102px;
     margin-left: 165px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     margin-left: 70px;
   }
 }
@@ -87,7 +87,7 @@
 }
 .subscribe {
   text-align: center;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0px;
@@ -105,11 +105,11 @@
   @include title-h3;
 }
 .form-footer {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     display: block;
     text-align: -webkit-center;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     display: inline-flex;
     max-width: 570px;
   }
@@ -137,10 +137,10 @@
     @extend %flex-row;
     color: rgba(255, 255, 255, 0.6);
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     display: block;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     margin-right: 12px;
     margin-bottom: 0;
   }

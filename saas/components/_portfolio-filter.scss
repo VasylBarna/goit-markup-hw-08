@@ -5,11 +5,11 @@
 .filters-list {
   margin-bottom: 40px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     text-align: center;
     margin-bottom: 14px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desctop) {
     text-align: center;
     margin-bottom: 34px;
   }
@@ -17,7 +17,7 @@
 .filters-list .item:not(:last-child) {
   margin-right: 8px;
   &:nth-child(-n + 3) {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $max-mobile) {
       margin-bottom: 15px;
     }
   }
