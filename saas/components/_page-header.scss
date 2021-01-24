@@ -16,7 +16,10 @@
     max-height: 80px;
   }
 }
-
+.main-nav {
+  // position: fixed;
+  // z-index: 1;
+}
 /* Site-nav */
 .nav-title {
   display: flex;
@@ -129,7 +132,6 @@
     .item:last-child {
       margin-left: 30px;
     }
-    
   }
 }
 .auth-nav .mailto {

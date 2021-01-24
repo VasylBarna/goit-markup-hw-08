@@ -21,9 +21,10 @@
   @media screen and (min-width: $tablet) {
     display: flex;
     align-items: baseline;
-    text-align: inherit;
+    text-align: center;
   }
   @media screen and (min-width: $desctop) {
+    text-align: inherit;
   }
 }
 .footer_desktop {
