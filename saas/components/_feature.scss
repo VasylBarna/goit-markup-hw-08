@@ -28,11 +28,8 @@
   margin: 0 auto;
 }
 .feature-list .item {
-  @media screen and (min-width: $mobile) {
-    width: 450px;
-  }
-
-  @media screen and (min-width: $tablet) {
+  max-width: 450px;
+    @media screen and (min-width: $tablet) {
     width: 354px;
   }
   @media screen and (min-width: $desctop) {

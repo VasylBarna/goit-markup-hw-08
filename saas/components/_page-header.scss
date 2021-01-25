@@ -1,44 +1,49 @@
 .page-header {
-  position: fixed;
   position: relative;
-  width: 100%;
-  top: 0;
-  left: 0;
-  max-height: 60px;
-  z-index: 1;
+  min-height: 60px;
+
+  @media screen and (min-width: $tablet) {
+    height: 80px;
+  }
+}
+.main-nav {
   font-weight: 500;
   font-size: $font-size-body;
   line-height: 1.14;
   letter-spacing: 0.02em;
   background-color: $white-button-color;
   border-bottom: 1px solid $border-header-color;
-  @media screen and (min-width: $tablet) {
-    max-height: 80px;
+  @media screen and (max-width: $max-mobile) {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
   }
-}
-.main-nav {
-  // position: fixed;
-  // z-index: 1;
+  @media screen and (min-width: $tablet) {
+    position: relative;
+    max-width: 100%;
+    height: inherit;
+  }
 }
 /* Site-nav */
 .nav-title {
+  width: 100%;
+  @media screen and (min-width: $tablet) {
+    margin-left: auto;
+  }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: inherit;
 }
 .site-nav {
+  margin-left: auto;
   @media screen and (max-width: $max-mobile) {
     display: flex;
     flex-direction: column;
     margin-bottom: 60px;
-  }
-  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
-    margin-left: 88px;
-    margin-right: 84px;
-  }
-  @media screen and (min-width: $desctop) {
-    margin-left: 93px;
-    margin-right: 305px;
   }
 }
 .site-nav .item:not(:last-child) {
@@ -53,14 +58,14 @@
   position: relative;
   color: $primary-text-color;
   transition: color 250ms $transition-timing-function;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
   &.current {
     color: $accent-button-color;
     transition: color 250ms $transition-timing-function;
-    @media screen and (min-width: $tablet) {
-      display: block;
-      padding-top: 32px;
-      padding-bottom: 32px;
-    }
   }
   &:hover,
   &:focus {
@@ -81,16 +86,17 @@
   }
 }
 .address-nav {
-  @media screen and (max-width: $max-mobile) {
+  @media screen and (max-width: $max-tablet) {
     display: flex;
     flex-direction: column;
   }
-  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+  @media screen and (min-width: $tablet) {
     margin-left: auto;
     display: flex;
     align-items: center;
     padding-bottom: 21px;
     padding-top: 21px;
+    height: 80px;
   }
 }
 .address-nav .link {

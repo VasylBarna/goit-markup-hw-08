@@ -66,6 +66,9 @@
     color: $accent-button-color;
     border-color: $accent-button-color;
   }
+   @media screen and (min-width: $mobile) and (max-width: $max-mobile) {
+    width: 210px;
+  }
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     width: 226px;
   }

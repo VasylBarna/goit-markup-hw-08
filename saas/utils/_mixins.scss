@@ -6,7 +6,7 @@
 @mixin btn {
   padding-top: 10px;
   padding-bottom: 10px;
-  max-width: 200px;
+  min-width: 200px;
   @include flex-row(center);
   font-weight: $font-weight-bold;
   font-size: $font-size-btn;

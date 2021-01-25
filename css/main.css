@@ -274,12 +274,6 @@ summary {
   display: list-item;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 .list {
   margin: 0px;
   padding: 0px;
@@ -344,13 +338,20 @@ img {
 .logo {
   padding-top: 16px;
   padding-bottom: 16px;
-  display: block;
+  display: inline-block;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -377,13 +378,17 @@ img {
 }
 
 .page-header {
-  position: fixed;
   position: relative;
-  width: 100%;
-  top: 0;
-  left: 0;
-  max-height: 60px;
-  z-index: 1;
+  min-height: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    height: 80px;
+  }
+}
+
+.main-nav {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -392,17 +397,42 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
+@media screen and (max-width: 767px) {
+  .main-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+  }
+}
+
 @media screen and (min-width: 768px) {
-  .page-header {
-    max-height: 80px;
+  .main-nav {
+    position: relative;
+    max-width: 100%;
+    height: inherit;
   }
 }
 
 /* Site-nav */
 .nav-title {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-title {
+    margin-left: auto;
+  }
+}
+
+.site-nav {
+  margin-left: auto;
 }
 
 @media screen and (max-width: 767px) {
@@ -410,20 +440,6 @@ img {
     display: flex;
     flex-direction: column;
     margin-bottom: 60px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .site-nav {
-    margin-left: 88px;
-    margin-right: 84px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .site-nav {
-    margin-left: 93px;
-    margin-right: 305px;
   }
 }
 
@@ -445,17 +461,17 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav .link.current {
-  color: #2196f3;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 @media screen and (min-width: 768px) {
-  .site-nav .link.current {
+  .site-nav .link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
   }
+}
+
+.site-nav .link.current {
+  color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover, .site-nav .link:focus {
@@ -479,20 +495,21 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .address-nav {
     display: flex;
     flex-direction: column;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .address-nav {
     margin-left: auto;
     display: flex;
     align-items: center;
     padding-bottom: 21px;
     padding-top: 21px;
+    height: 80px;
   }
 }
 
@@ -569,9 +586,17 @@ img {
 }
 
 .section-hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  position: relative;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .overlay {
@@ -656,7 +681,7 @@ img {
 .hero-btn {
   padding-top: 10px;
   padding-bottom: 10px;
-  max-width: 200px;
+  min-width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -701,7 +726,7 @@ img {
 .form-btn {
   padding-top: 10px;
   padding-bottom: 10px;
-  max-width: 200px;
+  min-width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -750,8 +775,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 450px;
-  width: 100%;
+  min-width: 450px;
   min-height: 609px;
   padding-top: 40px;
   padding-right: 40px;
@@ -876,7 +900,6 @@ img {
 }
 
 .comment:focus::placeholder {
-  font-size: 14px;
   line-height: 1.14;
 }
 
@@ -892,7 +915,7 @@ textarea {
 }
 
 .contract {
-  margin-left: 4px;
+  margin-left: 1px;
   position: relative;
   color: #2196f3;
 }
@@ -1008,10 +1031,8 @@ textarea {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 480px) {
-  .feature-list .item {
-    width: 450px;
-  }
+.feature-list .item {
+  max-width: 450px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1157,12 +1178,7 @@ textarea {
   display: block;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-
-@media screen and (min-width: 480px) {
-  .workers-list .item {
-    width: 450px;
-  }
+  max-width: 450px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1345,6 +1361,12 @@ textarea {
   border-color: #2196f3;
 }
 
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .clients-link {
+    width: 210px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .clients-link {
     width: 226px;
@@ -1367,15 +1389,12 @@ textarea {
 }
 
 .section-footers {
+  position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
   display: block;
   text-align: center;
   background-color: #2f303a;
-  display: flex;
-  text-align: inherit;
-  align-items: baseline;
-  justify-content: space-between;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1388,15 +1407,14 @@ textarea {
 }
 
 .footers-tablet {
+  display: inline-block;
   text-align: center;
-  align-items: baseline;
 }
 
 @media screen and (min-width: 768px) {
   .footers-tablet {
     display: flex;
     align-items: baseline;
-    text-align: center;
   }
 }
 
@@ -1404,6 +1422,10 @@ textarea {
   .footers-tablet {
     text-align: inherit;
   }
+}
+
+.footer_desktop {
+  box-sizing: border-box;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1456,6 +1478,7 @@ textarea {
 
 .sign {
   margin-bottom: 60px;
+  display: inline-block;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1476,7 +1499,7 @@ textarea {
 .sign-title {
   margin-top: 0;
   margin-bottom: 20px;
-  display: block;
+  display: inline-block;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -1501,6 +1524,7 @@ textarea {
     margin-right: 0;
     margin-bottom: 0px;
     margin-left: 93px;
+    display: inline-grid;
     text-align: inherit;
   }
 }
@@ -1510,7 +1534,7 @@ textarea {
   margin-right: 0;
   margin-bottom: 20px;
   margin-left: 0;
-  display: block;
+  display: inline-block;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -1538,7 +1562,8 @@ textarea {
   padding-right: 16px;
   padding-bottom: 15px;
   padding-left: 16px;
-  width: 450px;
+  display: inline-block;
+  width: 100%;
   min-height: 50px;
   color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1557,6 +1582,12 @@ textarea {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (min-width: 768px) {
+  .footer-input {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-input {
     display: block;
@@ -1573,7 +1604,7 @@ textarea {
 .subscribe .btn {
   padding-top: 10px;
   padding-bottom: 10px;
-  max-width: 200px;
+  min-width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1591,6 +1622,7 @@ textarea {
   padding-right: 13px;
   padding-left: 28px;
   display: inline-flex;
+  max-width: 200px;
 }
 
 .subscribe .send {
@@ -1819,6 +1851,7 @@ textarea {
     top: 100%;
     left: 0;
     width: 100%;
+    height: 393px;
     max-height: 453px;
     padding-top: 60px;
     padding-right: 15px;
@@ -1839,6 +1872,7 @@ textarea {
 @media screen and (min-width: 768px) {
   .menu-container {
     display: flex;
+    width: 100%;
   }
 }
 
