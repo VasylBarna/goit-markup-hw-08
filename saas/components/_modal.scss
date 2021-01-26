@@ -24,9 +24,13 @@
   padding-right: 55px;
   padding-left: 55px;
   transition: background-color 250ms $transition-timing-function;
+  max-width: 200px;
   &:hover,
   &:focus {
     background-color: $focus-button-color;
+  }
+  @media screen and (min-width: $mobile) {
+    min-width: 200px;
   }
 }
 .backdrop {
@@ -50,7 +54,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 450px;
+  max-width: 450px;
   min-height: 609px;
   padding-top: 40px;
   padding-right: 40px;
@@ -61,6 +65,9 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms $transition-timing-function;
+  @media screen and (min-width: $mobile) {
+    min-width: 450px;
+  }
   @media screen and (min-width: $desctop) {
     min-width: 528px;
     min-height: 581px;
@@ -106,12 +113,15 @@
   margin-left: 0;
   display: block;
   text-align: center;
-  min-width: 370px;
+  max-width: 370px;
   font-size: 20px;
   line-height: 1.15;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
   color: $primary-text-color;
+  @media screen and (min-width: $mobile) {
+    min-width: 370px;
+  }
   @media screen and (min-width: $desctop) {
     min-width: 448px;
     line-height: 1.5;
